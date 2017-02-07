@@ -1,0 +1,34 @@
+﻿<Grid
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.35*"></RowDefinition>
+                    <RowDefinition Height="0.45*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="0.1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <GroupBox Header="Вопрос" Margin="5">
+                    <TextBlock Text="{Binding XPath=question}" TextWrapping="Wrap"/>
+                </GroupBox>
+                <GroupBox Header="Инструкция" Grid.Row="1" Margin="5">
+                    <TextBlock Text="{Binding XPath=instruction}" TextWrapping="Wrap"/>
+                </GroupBox>
+                <GroupBox Header="Ответ"  Margin="5,5,5,0" Grid.Row="2">
+                    <DataGrid x:Name="Answ" AutoGenerateColumns="False"
+ ItemsSource="{Binding XPath=\answer}" Margin="10,6,10,0" MaxWidth="1000"  SelectionMode="Single" >
+                       <DataGrid.Columns>
+                            <DataGridTextColumn  x:Name="column1" Binding="{Binding XPath=column1}" Width="1*"/>
+                            <DataGridTextColumn  x:Name="column2" Binding="{Binding XPath=column2}" Width="7*"/>
+                        </DataGrid.Columns>
+                        <DataGrid.ContextMenu>
+                            <ContextMenu x:Name="fuck">
+                                <MenuItem x:Name="MenuItem1" Header="Товары"/>
+                                <MenuItem x:Name="MenuItem2"  Header="Доля рынка" />
+                            </ContextMenu>
+                        </DataGrid.ContextMenu>
+                    </DataGrid>
+                </GroupBox>
+                <Button x:Name="add" Content="Добавить строку в таблицу" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <MenuItem x:Name="fuc"/>
+                
+            </Grid>

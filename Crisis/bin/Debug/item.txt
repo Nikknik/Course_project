@@ -1,0 +1,12 @@
+﻿<item>
+  <question>Перечислите рынки, на которых действует предприятие.</question>
+  <instruction>Перечислите все рынки, на которых действует предпрпиятие. Занесите информацию в таблицу ниже.</instruction>
+  <answer>
+    <column1>1</column1>
+    <column2>Южные Ворота</column2>
+  </answer>
+  <answer>
+    <column1>2</column1>
+    <column2>Черкизовский</column2>
+  </answer>
+</item>
